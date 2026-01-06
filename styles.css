@@ -1,0 +1,83 @@
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+/* QUOTE CARD */
+.quote-card {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3rem 2rem;
+    max-width: 700px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease;
+    transform: translateY(20px);
+}
+
+.quote-card.show {
+    opacity: 1;
+}
+
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+}
+
+/* TEXT STYLING */
+.quote-card p {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: #00ffea;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffea;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00ffea; }
+    to { text-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea; }
+}
+
+#quote-author {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #bbb;
+    font-style: italic;
+}
+
+/* BUTTON */
+#next-quote {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #00ffea;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#next-quote:hover {
+    transform: scale(1.05);
+    background-color: #00d6c0;
+}
